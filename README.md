@@ -122,7 +122,6 @@ const NPMCard = ({
       >
         <plain_text>发布成功</plain_text>
       </div>
-      {/* @ts-ignore */}
       <hr />
       <div
         fields={[
