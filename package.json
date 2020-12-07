@@ -1,0 +1,23 @@
+{
+  "name": "lark-jsx",
+  "version": "0.2.1",
+  "description": "",
+  "main": "jsx-runtime/index",
+  "types": "jsx-runtime/index.d.ts",
+  "sources": "index.ts",
+  "files": [
+    "jsx-runtime/"
+  ],
+  "scripts": {
+    "prepublishOnly": "rm -rf ./jsx-runtime && npm run build",
+    "build:esm": "tsc && mv ./jsx-runtime/index.js ./jsx-runtime/index.mjs",
+    "build:cjs": "tsc --module commonjs --outDir ./ttt && mv ./ttt/index.js ./jsx-runtime/index.js && rm -rf ./ttt",
+    "build": "npm run build:esm && npm run build:cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  }
+}
